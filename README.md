@@ -1,8 +1,76 @@
 # Tiny Tamagotchi MVP
 
-`ChuChu` is a standalone, spec-driven virtual pet built for the DeepLearning.AI Tiny Tamagotchi MVP challenge.
+ChuChu is a standalone, spec-driven virtual pet built for the DeepLearning.AI Tiny Tamagotchi MVP challenge.
 
-## Repository Shape
+[![CI](https://img.shields.io/github/actions/workflow/status/usermanoj/Tamagotchi-SDD-Codex/ci.yml?branch=main&label=CI)](https://github.com/usermanoj/Tamagotchi-SDD-Codex/actions/workflows/ci.yml)
+[![Frontend](https://img.shields.io/badge/Frontend-Next.js-111827)](./web)
+[![Backend](https://img.shields.io/badge/Backend-FastAPI-009688)](./api)
+[![Database](https://img.shields.io/badge/Database-SQLite-0f172a)](./api)
+[![Spec Driven](https://img.shields.io/badge/Spec--Driven-Development-2563eb)](./specs)
+[![Demo Video](https://img.shields.io/badge/Demo-Video-f97316)](./docs/assets/chuchu-demo.webm)
+[![Deploy to Render](https://img.shields.io/badge/Deploy-Render-46E3B7)](https://render.com/deploy?repo=https://github.com/usermanoj/Tamagotchi-SDD-Codex)
+
+## Preview
+
+[![ChuChu preview](./docs/assets/chuchu-preview.png)](./docs/assets/chuchu-demo.webm)
+
+## Why This Repo
+
+- Spec-first workflow with a clear constitution, feature plans, requirements, and validation docs
+- Playable virtual pet loop with `Normal`, `Sick`, and permanent `Evolved` states
+- Backend-persisted pet lifecycle instead of browser-only state
+- Clean standalone architecture: `Next.js` frontend + `FastAPI` backend
+
+## Live Demo
+
+A public deployment can be launched from this repository using the included [Render blueprint](./render.yaml).
+
+- One-click deploy: [Deploy to Render](https://render.com/deploy?repo=https://github.com/usermanoj/Tamagotchi-SDD-Codex)
+- Recorded walkthrough: [Watch demo video](./docs/assets/chuchu-demo.webm)
+
+Note:
+The Render blueprint is committed and ready. The actual public app URL appears after the first deployment is created in Render.
+
+## Core Experience
+
+- Living vitals: Hunger, Happiness, and Energy decay automatically over time
+- Care actions: Feed, Play, and Rest update the pet immediately with clear trade-offs
+- State transitions: ChuChu responds visually and behaviorally to good care or neglect
+- Evolution path: sustained high vitals unlock a permanent evolved form
+- Persistence: the pet state survives refreshes through the backend data layer
+
+## System Overview
+
+```mermaid
+flowchart LR
+    A["Next.js UI"] -->|"GET / POST"| B["FastAPI API"]
+    B --> C["Game Engine"]
+    C --> D["SQLite Save"]
+    C --> B
+    B --> A
+```
+
+## Spec Suite
+
+### Constitution
+
+- [Mission](./specs/mission.md)
+- [Roadmap](./specs/roadmap.md)
+- [Tech Stack](./specs/tech-stack.md)
+
+### Feature Specs
+
+- [Core Simulation Loop](./core-simulation-loop/requirements.md)
+- [Care Actions And Feedback](./care-actions-feedback/requirements.md)
+- [State Progression And Personality](./state-progression-personality/requirements.md)
+- [Persistence And Presentation Shell](./persistence-shell/requirements.md)
+
+### Validation
+
+- [Validation Report](./docs/validation-report.md)
+- [Backend tests](./api/tests/test_game_engine.py)
+
+## Project Structure
 
 ```text
 tiny-tamagotchi-mvp/
@@ -11,39 +79,19 @@ tiny-tamagotchi-mvp/
   care-actions-feedback/
   state-progression-personality/
   persistence-shell/
-  web/
   api/
+  web/
   docs/
 ```
 
-## Constitution
-
-- [Mission](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/specs/mission.md>)
-- [Roadmap](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/specs/roadmap.md>)
-- [Tech Stack](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/specs/tech-stack.md>)
-
-## Feature Specs
-
-- [Core Simulation Loop](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/core-simulation-loop/requirements.md>)
-- [Care Actions And Feedback](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/care-actions-feedback/requirements.md>)
-- [State Progression And Personality](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/state-progression-personality/requirements.md>)
-- [Persistence And Presentation Shell](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/persistence-shell/requirements.md>)
-
-## Implementation Summary
-
-- Standalone `Next.js` frontend in [web](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/web>)
-- Standalone `FastAPI` backend in [api](</C:/Users/Admin/OneDrive/Documents/New project/tiny-tamagotchi-mvp/api>)
-- `SQLite` persistence with a single global ChuChu save
-- Deterministic backend simulation for timed decay, care actions, state transitions, and permanent evolution
-
-## Local Run
+## Local Development
 
 ### Backend
 
 ```powershell
 cd C:\Users\Admin\OneDrive\Documents\New project\tiny-tamagotchi-mvp\api
-pip install -e .[dev]
-uvicorn app.main:app --reload --port 8102
+C:\Users\Admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -m pip install -e .[dev]
+C:\Users\Admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -m uvicorn app.main:app --reload --port 8102
 ```
 
 ### Frontend
@@ -55,4 +103,35 @@ npm install
 npm run dev
 ```
 
-The frontend expects the API at `http://localhost:8102/api/v1`.
+Then open:
+
+- App: [http://localhost:3200](http://localhost:3200)
+- API: [http://localhost:8102/api/v1/pet](http://localhost:8102/api/v1/pet)
+
+## Quality Checks
+
+- Backend tests: `python -m pytest`
+- Frontend typecheck: `npm run typecheck`
+- Frontend production build: `npm run build`
+
+Current validated result:
+
+- backend tests: `20 passed`
+- frontend typecheck: passed
+
+## Deployment Notes
+
+This repository includes [render.yaml](./render.yaml) so the frontend and backend can be deployed together from the same GitHub repo.
+
+Environment wiring used by the app:
+
+- frontend env: `NEXT_PUBLIC_API_BASE_URL`
+- backend env: `CORS_ORIGINS`
+- backend persistence: `DATABASE_URL` or default SQLite file under `api/data`
+
+## Tech Stack
+
+- Frontend: `Next.js 16`, `React 19`, `TypeScript`
+- Backend: `FastAPI`, `SQLAlchemy`, `Uvicorn`
+- Persistence: `SQLite`
+- Process: Spec-Driven Development with explicit validation artifacts
