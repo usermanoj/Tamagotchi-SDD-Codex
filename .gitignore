@@ -1,0 +1,16 @@
+api/.pytest_cache/
+api/data/*.db
+api/data/*.sqlite3
+api/pytest-cache-files-*/
+api/tiny_tamagotchi_api.egg-info/
+api/__pycache__/
+api/**/*.pyc
+api/**/__pycache__/
+web/.next/
+web/node_modules/
+web/.env.local
+web/tsconfig.tsbuildinfo
+docs/demo-assets/
+docs/run-logs/
+docs/submission-demo-script.md
+scripts/

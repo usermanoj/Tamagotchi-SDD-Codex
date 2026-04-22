@@ -1,0 +1,1 @@
+"""Tiny Tamagotchi API package."""
