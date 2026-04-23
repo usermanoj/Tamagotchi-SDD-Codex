@@ -11,8 +11,10 @@ web/node_modules/
 web/.env.local
 web/tsconfig.tsbuildinfo
 docs/demo-assets/
+docs/assets/chuchu-demo.gif
 docs/assets/gif-frames/
 docs/assets/preview-test.png
+docs/assets/tmp-test.mp4
 docs/run-logs/
 docs/submission-demo-script.md
 scripts/
