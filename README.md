@@ -10,14 +10,6 @@ ChuChu is a standalone, spec-driven virtual pet built for the DeepLearning.AI Ti
 [![Deploy to Render](https://img.shields.io/badge/Deploy-Render-46E3B7)](https://render.com/deploy?repo=https://github.com/usermanoj/Tamagotchi-SDD-Codex)
 [![Playthrough Demo](https://img.shields.io/badge/Watch-Playthrough_Demo-1477C9?style=for-the-badge&logo=github&logoColor=white)](https://usermanoj.github.io/Tamagotchi-SDD-Codex/chuchu-demo.webm)
 
-## Preview
-
-<p align="center">
-  <a href="https://usermanoj.github.io/Tamagotchi-SDD-Codex/chuchu-demo.webm">
-    <img src="./docs/assets/chuchu-preview.png" alt="ChuChu app preview" width="860" />
-  </a>
-</p>
-
 ## Watch The Playthrough
 
 <p align="center">
@@ -26,7 +18,7 @@ ChuChu is a standalone, spec-driven virtual pet built for the DeepLearning.AI Ti
   </a>
 </p>
 
-The recorded demo now opens directly as a hosted WebM on GitHub Pages, matching the simpler Antigravity-style flow.
+The recorded demo now opens directly as a hosted WebM on GitHub Pages.
 
 ## Why This Repo
 
