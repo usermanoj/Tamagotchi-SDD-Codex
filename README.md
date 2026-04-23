@@ -7,12 +7,16 @@ ChuChu is a standalone, spec-driven virtual pet built for the DeepLearning.AI Ti
 [![Backend](https://img.shields.io/badge/Backend-FastAPI-009688)](./api)
 [![Database](https://img.shields.io/badge/Database-SQLite-0f172a)](./api)
 [![Spec Driven](https://img.shields.io/badge/Spec--Driven-Development-2563eb)](./specs)
-[![Demo Video](https://img.shields.io/badge/Demo-Video-f97316)](./docs/assets/chuchu-demo.webm)
+[![Preview GIF](https://img.shields.io/badge/Preview-Animated_GIF-f97316)](./docs/assets/chuchu-demo.gif)
+[![Walkthrough Video](https://img.shields.io/badge/Walkthrough-Download_WebM-7c3aed)](https://raw.githubusercontent.com/usermanoj/Tamagotchi-SDD-Codex/main/docs/assets/chuchu-demo.webm)
 [![Deploy to Render](https://img.shields.io/badge/Deploy-Render-46E3B7)](https://render.com/deploy?repo=https://github.com/usermanoj/Tamagotchi-SDD-Codex)
 
 ## Preview
 
-[![ChuChu preview](./docs/assets/chuchu-preview.png)](./docs/assets/chuchu-demo.webm)
+[![ChuChu animated preview](./docs/assets/chuchu-demo.gif)](https://raw.githubusercontent.com/usermanoj/Tamagotchi-SDD-Codex/main/docs/assets/chuchu-demo.webm)
+
+- Animated repo preview: [chuchu-demo.gif](./docs/assets/chuchu-demo.gif)
+- Full walkthrough video: [direct WebM link](https://raw.githubusercontent.com/usermanoj/Tamagotchi-SDD-Codex/main/docs/assets/chuchu-demo.webm)
 
 ## Why This Repo
 
@@ -26,7 +30,7 @@ ChuChu is a standalone, spec-driven virtual pet built for the DeepLearning.AI Ti
 A public deployment can be launched from this repository using the included [Render blueprint](./render.yaml).
 
 - One-click deploy: [Deploy to Render](https://render.com/deploy?repo=https://github.com/usermanoj/Tamagotchi-SDD-Codex)
-- Recorded walkthrough: [Watch demo video](./docs/assets/chuchu-demo.webm)
+- Recorded walkthrough: [Download or open the full WebM demo](https://raw.githubusercontent.com/usermanoj/Tamagotchi-SDD-Codex/main/docs/assets/chuchu-demo.webm)
 
 Note:
 The Render blueprint is committed and ready. The actual public app URL appears after the first deployment is created in Render.

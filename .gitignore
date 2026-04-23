@@ -11,6 +11,8 @@ web/node_modules/
 web/.env.local
 web/tsconfig.tsbuildinfo
 docs/demo-assets/
+docs/assets/gif-frames/
+docs/assets/preview-test.png
 docs/run-logs/
 docs/submission-demo-script.md
 scripts/
