@@ -8,11 +8,12 @@ ChuChu is a standalone, spec-driven virtual pet built for the DeepLearning.AI Ti
 [![Database](https://img.shields.io/badge/Database-SQLite-0f172a)](./api)
 [![Spec Driven](https://img.shields.io/badge/Spec--Driven-Development-2563eb)](./specs)
 [![Deploy to Render](https://img.shields.io/badge/Deploy-Render-46E3B7)](https://render.com/deploy?repo=https://github.com/usermanoj/Tamagotchi-SDD-Codex)
+[![Playthrough Demo](https://img.shields.io/badge/Watch-Playthrough_Demo-1477C9?style=for-the-badge&logo=github&logoColor=white)](https://usermanoj.github.io/Tamagotchi-SDD-Codex/)
 
 ## Preview
 
 <p align="center">
-  <a href="./docs/assets/chuchu-demo.mp4">
+  <a href="https://usermanoj.github.io/Tamagotchi-SDD-Codex/">
     <img src="./docs/assets/chuchu-preview.png" alt="ChuChu app preview" width="860" />
   </a>
 </p>
@@ -20,12 +21,12 @@ ChuChu is a standalone, spec-driven virtual pet built for the DeepLearning.AI Ti
 ## Watch The Playthrough
 
 <p align="center">
-  <a href="./docs/assets/chuchu-demo.mp4">
-    <img src="https://img.shields.io/badge/Watch-Gameplay_Demo-1477C9?style=for-the-badge&logo=github&logoColor=white" alt="Watch gameplay demo" />
+  <a href="https://usermanoj.github.io/Tamagotchi-SDD-Codex/">
+    <img src="https://img.shields.io/badge/Open-GitHub_Pages_Player-1477C9?style=for-the-badge&logo=github&logoColor=white" alt="Open GitHub Pages player" />
   </a>
 </p>
 
-GitHub opens the MP4 preview directly on the repository file page, so the playthrough can be watched without using a GIF.
+The recorded demo is now intended to play from GitHub Pages, which is the same lightweight approach used in the Antigravity submission.
 
 ## Why This Repo
 
@@ -39,10 +40,11 @@ GitHub opens the MP4 preview directly on the repository file page, so the playth
 A public deployment can be launched from this repository using the included [Render blueprint](./render.yaml).
 
 - One-click deploy: [Deploy to Render](https://render.com/deploy?repo=https://github.com/usermanoj/Tamagotchi-SDD-Codex)
-- Recorded walkthrough: [Open the GitHub-hosted MP4 demo](./docs/assets/chuchu-demo.mp4)
+- Playthrough page: [Open the GitHub Pages demo player](https://usermanoj.github.io/Tamagotchi-SDD-Codex/)
+- Direct video: [Open the hosted WebM demo](https://usermanoj.github.io/Tamagotchi-SDD-Codex/chuchu-demo.webm)
 
 Note:
-The Render blueprint is committed and ready. The actual public app URL appears after the first deployment is created in Render.
+The Render blueprint is committed and ready. The actual public app URL appears after the first deployment is created in Render. GitHub Pages may take a minute or two to publish after a push.
 
 ## Core Experience
 
